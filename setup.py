@@ -2,7 +2,7 @@
 # Modified by Eric Xu
 
 # ========= Edit The Line Below ==============
-IPOPT_DIR='/home/xuy/local/ScientificResearch/Ipopt/Ipopt-3.10.2/'
+IPOPT_DIR='/home/Grads/2008/ebogart/Ipopt-3.10.1/build/'
 # ========= Edit The Line Above ==============
 
 # ========= Don't touch things below this ====
@@ -35,8 +35,7 @@ setup(name="pyipopt",
     Extension("pyipopt",FILES,
     extra_link_args=['-Wl,--rpath','-Wl,'+ IPOPT_LIB],
     library_dirs=[IPOPT_LIB],
-    libraries=['ipopt','blas','coinhsl','coinmetis',
-               'lapack','dl','m'],
+    libraries=['ipopt','blas','coinhsl','lapack','coinmetis','dl','m'],
     include_dirs=[numpy_include,IPOPT_INC]),
   ]
 )
